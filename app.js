@@ -41,7 +41,7 @@ const fetchNews = async (id, name) => {
       </div>
       <div class='md:w-3/5 sm:w-full ml-3'>
         <div>
-          <h1 class='lg:text-3xl md:text-base sm:text-text-2xl text-2xl smy-2 text-blue-800'> ${title} </h1>
+          <h1 class='lg:text-3xl md:text-base sm:text-2xl text-base text-2xl smy-2 text-blue-800'> ${title} </h1>
           <p class=' lg:text-xl md:text-sm sm:text-base text-'>${
 						details
 							? details.length > 250
@@ -56,7 +56,7 @@ const fetchNews = async (id, name) => {
               <img src=${img} width='60px' height='60px' class='rounded-full' />
             </div>
             <div class='ml-3'>
-              <h2 class='text-2xl text-blue-800'>${
+              <h2 class='lg:text-2xl md:text-2xl sm:text-2xl text-base text-blue-800'>${
 								name ? name : "Not Found"
 							}</h2>
               <span>${published_date ? published_date : "Not Found"}</span>
