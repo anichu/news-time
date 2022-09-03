@@ -41,7 +41,7 @@ const fetchNews = async (id, name) => {
       </div>
       <div class='md:w-3/5 sm:w-full ml-3'>
         <div>
-          <h1 class='lg:text-3xl md:text-base sm:text-2xl text-base text-2xl smy-2 text-blue-800'> ${title} </h1>
+          <h1 class='lg:text-3xl md:text-base sm:text-2xl text-base smy-2 text-blue-800'> ${title} </h1>
           <p class=' lg:text-xl md:text-sm sm:text-base text-'>${
 						details
 							? details.length > 250
@@ -63,7 +63,7 @@ const fetchNews = async (id, name) => {
             </div>
           </div>
           <div>
-            <h3> <i class="fa-sharp fa-solid fa-eye"></i> ${
+            <h3 class='text-blue-800'> <i class="fa-sharp fa-solid fa-eye"></i> ${
 							total_view === null ? "0" : total_view
 						}</h3>
           </div>
