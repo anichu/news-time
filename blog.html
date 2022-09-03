@@ -72,6 +72,55 @@
 						it.The user cannot update the const variable once it is declared.
 					</p>
 				</div>
+				<div>
+					<h1 class="text-3xl mb-3 mt-5 font-semibold">
+						Difference between regular functions and arrow functions
+					</h1>
+					<hr />
+					<p class="text-xl mt-2">
+						Arrow functions – a new feature introduced in ES6 – enable writing
+						concise functions in JavaScript. While both regular and arrow
+						functions work in a similar manner, yet there are certain
+						interesting differences between them, as discussed below.
+					</p>
+					<p class="text-xl mt-2">
+						Unlike regular functions, arrow functions do not have their own
+						<strong>this</strong>.
+					</p>
+					<p class="text-xl mt-2">
+						Arguments objects are not available in arrow functions, but are
+						available in regular functions.
+					</p>
+					<p class="text-xl mt-2">
+						Regular functions created using function declarations or expressions
+						are ‘constructible’ and ‘callable’. Since regular functions are
+						constructible, they can be called using the ‘new’ keyword. However,
+						the arrow functions are only ‘callable’ and not constructible. Thus,
+						we will get a run-time error on trying to construct a
+						non-constructible arrow functions using the
+						<strong>new </strong> keyword.
+					</p>
+				</div>
+				<div>
+					<h1 class="text-3xl mb-2 font-semibold">
+						Template literals (Template strings)
+					</h1>
+					<hr />
+					<p class="text-xl mt-2">
+						Template literals are literals delimited with backtick (`)
+						characters, allowing for multi-line strings, for string
+						interpolation with embedded expressions, and for special constructs
+						called tagged templates.
+					</p>
+					<p class="text-xl mt-2">
+						Template literals are sometimes informally called template strings,
+						because they are used most commonly for string interpolation (to
+						create strings by doing substitution of placeholders). However, a
+						tagged template literal may not result in a string; it can be used
+						with a custom tag function to perform whatever operations you want
+						on the different parts of the template literal.
+					</p>
+				</div>
 			</section>
 		</main>
 	</body>
