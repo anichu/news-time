@@ -27,9 +27,12 @@ const fetchNews = async (id, name) => {
 	const url = `https://openapi.programming-hero.com/api/news/category/${id}`;
 	const response = await fetch(url);
 	const data = (await response.json()).data;
+	data.sort((a, b) => (a.total_view > b.total_view ? 1 : -1));
 	let html = "";
 	data.forEach((d) => {
-		const { title, author, thumbnail_url, image_url, details } = d;
+		const { title, author, total_view, image_url, details } = d;
+		const { published_date, name, img } = author;
+		console.log(typeof total_view);
 		html += `
     <br/>
     <div class='flex md:flex-row sm:flex-col flex-col my-5 items-center'>
@@ -47,21 +50,22 @@ const fetchNews = async (id, name) => {
 							: "Not Found"
 					}</p>
         </div>
-        <div class='mt-3 flex justify-between'>
+        <div class='mt-3 flex justify-between items-center'>
           <div class='flex items-center'>
             <div >
-              <img src=${
-								author.img
-							} width='60px' height='60px' class='rounded-full' />
+              <img src=${img} width='60px' height='60px' class='rounded-full' />
             </div>
             <div class='ml-3'>
               <h2 class='text-2xl text-blue-800'>${
-								author.name ? author.name : "Not Found"
+								name ? name : "Not Found"
 							}</h2>
-              <span>${
-								author.published_date ? author.published_date : "Not Found"
-							}</span>
+              <span>${published_date ? published_date : "Not Found"}</span>
             </div>
+          </div>
+          <div>
+            <h3> <i class="fa-sharp fa-solid fa-eye"></i> ${
+							total_view === null ? "0" : total_view
+						}</h3>
           </div>
           <div class='text-2xl cursor-pointer'>
             <i class="fa-sharp fa-solid fa-right-long"></i>
