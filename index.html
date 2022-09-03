@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>News Time</title>
+		<link rel="stylesheet" href="style.css" />
 		<script src="https://cdn.tailwindcss.com"></script>
 		<script
 			src="https://kit.fontawesome.com/57804f697d.js"
@@ -23,6 +24,18 @@
 		</script>
 	</head>
 	<body class="bg-white">
+		<div class="overlay hidden">
+			<div class="show-modal">
+				<div class="modal">
+					<button
+						class="text-blue-800 p-4 mb-3 close-modal hover:border-0 border-0 font-bold py-2 rounded-full text-3xl"
+					>
+						&times;
+					</button>
+					<div id="modal-body" class="mt-4"></div>
+				</div>
+			</div>
+		</div>
 		<header class="mx-10">
 			<nav class="flex justify-between py-3 items-center">
 				<div class="logo capitalize font-bold text-3xl">
