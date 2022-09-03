@@ -67,7 +67,7 @@ const fetchNews = async (id, name) => {
 							total_view === null ? "0" : total_view
 						}</h3>
           </div>
-          <div class='text-2xl cursor-pointer'>
+          <div class='text-2xl cursor-pointer text-blue-800'>
             <i class="fa-sharp fa-solid fa-right-long"></i>
           </div>
         </div>
